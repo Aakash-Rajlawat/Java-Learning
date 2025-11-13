@@ -1,13 +1,18 @@
 import java.util.Scanner;
+
 class Main {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int a, b, c;
-        System.out.println("Enter any two numbers:");
-        a = s.nextInt();
-        b = s.nextInt();
-        c = a + b;
-        System.out.println("The sum is : " + c);
+        int age, yrsToWait;
+        System.out.println("Enter your age :");
+        age = s.nextInt();
+        if (age>18 || age == 18) {
+            System.out.println("You can vote");
+        }
+        else {
+            yrsToWait = 18 - age;
+            System.out.println("No! you still have to wait "+ yrsToWait + " yrs");
+        }
 
     }
 }
